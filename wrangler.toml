@@ -1,0 +1,14 @@
+
+type = "javascript"
+account_id = "8f0c2f2271ff857947d9a5b2c38595a0"
+zone_id = "77679a8547af21fab1fb07bd0425c6f0"
+compatibility_date = "2022-03-26"
+
+name = "oauth2test-dev"
+workers_dev = true
+route = ""
+
+[env.production]
+name = "oauth2test"
+workers_dev = false
+route = "https://oauth2test.kimlikdao.net/*"

@@ -75,7 +75,7 @@ async function handleRequest(request) {
     })
   }
 
-  return new Response('/auth for authorization code', {
-    headers: { 'content-type': 'text/plain' },
+  return new Response('authorization_code almak için /auth\nDaha fazla detay için https://github.com/KimlikDAO/oauth2test', {
+    headers: { 'content-type': 'text/plain;charset=utf-8' },
   })
 }

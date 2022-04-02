@@ -3,9 +3,9 @@ addEventListener('fetch', event => {
 })
 
 function hata(e) {
-  return new Response('Error: ' + e, {
+  return new Response('Hata: ' + e, {
     status: 404,
-    headers: { 'content-type': 'text/plain' }
+    headers: { 'content-type': 'text/plain;charset=utf-8' }
   });
 }
 

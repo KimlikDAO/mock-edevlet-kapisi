@@ -1,6 +1,6 @@
-# Test OAuth2 sunucusu
+# Mock OAuth2 sunucusu
 
-Bu test sunucusu https://oauth2test.kimlikdao.net adresinde hizmet veriyor.
+Bu test sunucusu https://mock-oauth2.kimlikdao.net adresinde hizmet veriyor.
 Test sunucusunu yerel olarak böyle başlatabiliriz:
 ``` shell
 wrangler dev

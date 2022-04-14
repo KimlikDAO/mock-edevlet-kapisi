@@ -62,7 +62,7 @@ async function handleRequest(request) {
 
     const auth = request.headers.get('authorization');
     if (!auth || !auth.startsWith("Bearer AT"))
-      return hata("invalid auth token");
+      return hata("Faké auth token AT ile başlamalı");
     const response = {
       ad: "Kaan",
       soyad: "Ankara",
@@ -75,7 +75,7 @@ async function handleRequest(request) {
     })
   }
 
-  return new Response('authorization_code almak için /auth\nDaha fazla detay için https://github.com/KimlikDAO/oauth2test', {
+  return new Response('authorization_code almak için /auth\nDaha fazla detay için https://github.com/KimlikDAO/mock-oauth2', {
     headers: { 'content-type': 'text/plain;charset=utf-8' },
   })
 }

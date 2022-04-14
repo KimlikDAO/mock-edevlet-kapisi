@@ -1,16 +1,8 @@
 {
   "private": true,
-  "name": "oauth2test",
-  "version": "1.0.0",
-  "description": "OAuth2 test sunucusu",
+  "name": "mock-oauth2",
+  "version": "0.0.0",
+  "description": "OAuth2 yapmacık sunucu",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write '**/*.{js,css,json,md}'"
-  },
-  "author": "KimlikDAO <dao@kimlikdao.org>",
-  "license": "MIT",
-  "devDependencies": {
-    "prettier": "^1.18.2"
-  }
+  "author": "KimlikDAO <dao@kimlikdao.org>"
 }

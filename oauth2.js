@@ -48,7 +48,7 @@ const handleAuth = (params) => {
 
   return Response.redirect(
     decodeURIComponent(/** @type {string} */(params.get("redirect_uri"))) +
-    "#code=AC22345678902&state=" + params.get("state"),
+    "?code=AC22345678902&state=" + params.get("state"),
     302);
 }
 
@@ -71,6 +71,7 @@ const handleToken = (request) => {
       return err('Hatalı `client_id`');
     if (data.get('client_secret') !== 'B97B789F-9D0F-48AF-AD09-0721979D0E9F')
       return err('Hatalı `client_secret`');
+    /** @const {OAuthAccessToken} */
     const response = {
       access_token: "AT" + code.substr(2),
       token_type: "bearer",

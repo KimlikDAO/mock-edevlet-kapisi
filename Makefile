@@ -1,4 +1,4 @@
-build/oauth2.js: oauth2.js lib/cf-worker.js lib/TCKTBilgileri.js
+build/oauth2.js: oauth2.js lib/cf-worker.js lib/TCKTBilgileri.js lib/api.js
 	mkdir -p build
 	yarn google-closure-compiler -W VERBOSE -O ADVANCED --charset UTF-8 \
                              --env BROWSER \

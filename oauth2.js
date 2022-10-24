@@ -98,7 +98,7 @@ export default {
     switch (url.pathname) {
       case "/auth": return handleAuth(url.searchParams);
       case "/token": return handleToken(request);
-      case "/veri": return handleData(request);
+      case "/bilgi": return handleData(request);
     }
     return err("Bilinmeyen pathname")
   }

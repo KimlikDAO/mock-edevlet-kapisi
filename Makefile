@@ -9,3 +9,6 @@ build/oauth2.js: oauth2.js lib/cf-worker.js lib/TCKTBilgileri.js
 
 clean:
 	rm -rf build
+
+cf-deployment: build/oauth2.js
+	yarn wrangler publish

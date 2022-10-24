@@ -11,3 +11,6 @@ name = "mock-oauth2-dev"
 main = "oauth2.js"
 workers_dev = true
 route = ""
+
+[build]
+command = "make build/oauth2.js"

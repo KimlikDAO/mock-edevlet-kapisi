@@ -4,5 +4,9 @@
   "version": "0.0.0",
   "description": "OAuth2 yapmacık sunucu",
   "main": "index.js",
-  "author": "KimlikDAO <dao@kimlikdao.org>"
+  "author": "KimlikDAO <dao@kimlikdao.org>",
+  "devDependencies": {
+    "google-closure-compiler": "^20221004.0.0",
+    "uglify-js": "^3.17.3"
+  }
 }

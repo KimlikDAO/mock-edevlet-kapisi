@@ -1,1 +1,4 @@
 .cargo-ok
+build/
+node_modules
+yarn.lock

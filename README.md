@@ -1,9 +1,9 @@
 # Mock OAuth2 sunucusu
 
-Bu test sunucusu https://mock-oauth2.kimlikdao.net adresinde hizmet veriyor.
+Test oauth2 sunucusu https://mock-oauth2.kimlikdao.net adresinde hizmet veriyor.
 Test sunucusunu yerel olarak böyle başlatabiliriz:
 ``` shell
-wrangler dev
+wrangler dev --local
 ```
 
 Auth code'u şu şekilde alabiliriz:
@@ -18,5 +18,5 @@ curl localhost:8787/token -d 'grant_type=authorization_code&code=AC22345678902&c
 
 Aldığımız `access_token` ile kullanıcı `Temel-Bilgileri`'ne ulaşabiliriz:
 ```shell
-curl localhost:8787/temel-bilgileri -H "Authorization: Bearer AT22345678902"
+curl localhost:8787/veri -H "Authorization: Bearer AT22345678902"
 ```

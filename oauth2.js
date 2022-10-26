@@ -14,12 +14,20 @@ const PEOPLE = {
       gender: "M"
     }),
     "contactInfo": /** @type {ContactInfo} */({
-      email: "kaan.ankara@ptt.gov.tr"
+      email: "kaan.ankara@ptt.gov.tr",
+      phone: "+90(555)555-55-55",
     }),
     "kütükBilgileri": /** @type {KütükBilgileri} */({
       annead: "Ayşe",
       babaad: "Mehmet",
       mhali: "Bekar",
+      BSN: 33,
+      cilt: 40,
+      hane: 7,
+      il: "Ankara",
+      ilçe: "Çankaya",
+      mahalle: "Anıtkaya Mahallesi",
+      tescil: "1975.06.13"
     }),
   }
 }

@@ -1,34 +1,44 @@
 /**
  * @fileoverview Mock e-devlet oauth2 server
+ *
  * @author KimlikDAO
  */
 
 const PEOPLE = {
   "22345678902": {
-    "personInfo": /** @type {PersonInfo} */({
-      first: "Kaan",
-      last: "Ankara",
-      dateOfBirth: "1975.06.12",
-      localIdNumber: "22345678902",
-      cityOfBirth: "Ankara",
-      gender: "M"
+    "Temel-Bilgileri": /** @type {nvi.TemelBilgileri} */({
+      ad: "Kaan",
+      soyad: "Ankara",
+      dt: "1975.06.12",
+      TCKN: "22345678902",
+      dyeri: "Ankara",
+      cinsiyet: "M"
     }),
-    "contactInfo": /** @type {ContactInfo} */({
+    "Iletisim-Bilgileri": /** @type {nvi.IletisimBilgileri} */({
       email: "kaan.ankara@ptt.gov.tr",
-      phone: "+90(555)555-55-55",
+      telefon: "+90(555)555-55-55",
+      KEP: "kaan.ankara@hs01.kep.tr",
     }),
-    "kütükBilgileri": /** @type {KütükBilgileri} */({
-      annead: "Ayşe",
-      babaad: "Mehmet",
-      mhali: "Bekar",
-      BSN: 33,
-      cilt: 40,
-      hane: 7,
+    "Kutuk-Bilgileri": /** @type {nvi.KutukBilgileri} */({
       il: "Ankara",
       ilçe: "Çankaya",
       mahalle: "Anıtkaya Mahallesi",
-      tescil: "1975.06.13"
+      cilt: 40,
+      hane: 7,
+      BSN: 33,
+      tescil: "1975.06.13",
+      annead: "Ayşe",
+      babaad: "Mehmet",
+      mhali: "Bekar",
     }),
+    "Adres-Bilgileri": /** @type {nvi.AdresBilgileri} */({
+      il: "Ankara",
+      ilçe: "Şereflikoçhisar",
+      mahalle: "Yusufkuyusu Mahallesi",
+      CSBM: "Yusufkuyusu",
+      dışKapı: "1",
+      içKapı: ""
+    })
   }
 }
 
@@ -84,10 +94,13 @@ const handleToken = (request) => {
       access_token: "AT" + code.substr(2),
       token_type: "bearer",
       expires_in: 0,
-      scope: "Temel-Bilgileri,Iletisim-Bilgileri"
+      scope: Object.keys(PEOPLE["22345678902"]).join(",")
     }
     return new Response(JSON.stringify(response), {
-      headers: { 'content-type': 'application/json;charset=utf-8' }
+      headers: {
+        'content-type': 'application/json;charset=utf-8',
+        'cache-control': 'no-store'
+      }
     })
   });
 }
@@ -109,6 +122,6 @@ export default {
       case "/token": return handleToken(request);
       case "/bilgi": return handleData(request);
     }
-    return err("Bilinmeyen pathname")
+    return err("Bilinmeyen pathname");
   }
 }

@@ -15,7 +15,7 @@ const PEOPLE = {
       cinsiyet: "M"
     }),
     "Iletisim-Bilgileri": /** @type {nvi.IletisimBilgileri} */({
-      email: "kaan.ankara@ptt.gov.tr",
+      eposta: "kaan.ankara@ptt.gov.tr",
       telefon: "+90(555)555-55-55",
       KEP: "kaan.ankara@hs01.kep.tr",
     }),

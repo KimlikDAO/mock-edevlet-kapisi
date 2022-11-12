@@ -29,7 +29,7 @@ const PEOPLE = {
       tescil: "1975.06.13",
       annead: "Ayşe",
       babaad: "Mehmet",
-      mhali: "Bekar",
+      mhali: "Bekâr",
     }),
     "Adres-Bilgileri": /** @type {nvi.AdresBilgileri} */({
       il: "Ankara",

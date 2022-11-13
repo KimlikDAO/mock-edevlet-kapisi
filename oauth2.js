@@ -27,9 +27,143 @@ const PEOPLE = {
       hane: 7,
       BSN: 33,
       tescil: "1975.06.13",
-      annead: "Ayşe",
+      annead: "Fatma",
       babaad: "Mehmet",
       mhali: "Bekâr",
+    }),
+    "Adres-Bilgileri": /** @type {nvi.AdresBilgileri} */({
+      il: "Ankara",
+      ilçe: "Şereflikoçhisar",
+      mahalle: "Yusufkuyusu Mahallesi",
+      CSBM: "Yusufkuyusu",
+      dışKapı: "1",
+      içKapı: ""
+    })
+  },
+  "43219345971": {
+    "Temel-Bilgileri": /** @type {nvi.TemelBilgileri} */({
+      ad: "Mehmet",
+      soyad: "Ankara",
+      dt: "1949.03.29",
+      TCKN: "43219345971",
+      dyeri: "Ankara",
+      cinsiyet: "M"
+    }),
+    "Iletisim-Bilgileri": /** @type {nvi.IletisimBilgileri} */({
+      eposta: "mehmet.ankara@hotmail.com",
+      telefon: "+90(530)300-30-30",
+    }),
+    "Kutuk-Bilgileri": /** @type {nvi.KutukBilgileri} */({
+      il: "Ankara",
+      ilçe: "Çankaya",
+      mahalle: "Anıtkaya Mahallesi",
+      cilt: 40,
+      hane: 7,
+      BSN: 32,
+      tescil: "1949.03.29",
+      annead: "Hayriye",
+      babaad: "Hayri",
+      mhali: "Evli",
+    }),
+    "Adres-Bilgileri": /** @type {nvi.AdresBilgileri} */({
+      il: "Ankara",
+      ilçe: "Şereflikoçhisar",
+      mahalle: "Yusufkuyusu Mahallesi",
+      CSBM: "Yusufkuyusu",
+      dışKapı: "1",
+      içKapı: ""
+    })
+  },
+  "76276456321": {
+    "Temel-Bilgileri": /** @type {nvi.TemelBilgileri} */({
+      ad: "Fatma",
+      soyad: "Ankara",
+      dt: "1947.08.25",
+      TCKN: "76276456321",
+      dyeri: "Samsun",
+      cinsiyet: "F"
+    }),
+    "Iletisim-Bilgileri": /** @type {nvi.IletisimBilgileri} */({
+      eposta: "fatma1947@gmail.com",
+      telefon: "+90(532)325-20-20",
+    }),
+    "Kutuk-Bilgileri": /** @type {nvi.KutukBilgileri} */({
+      il: "Samsun",
+      ilçe: "Atakum",
+      mahalle: "Mimarsinan Mahallesi",
+      cilt: 40,
+      hane: 3,
+      BSN: 32,
+      tescil: "1947.08.25",
+      annead: "Fadime",
+      babaad: "Ali",
+      mhali: "Evli",
+    }),
+    "Adres-Bilgileri": /** @type {nvi.AdresBilgileri} */({
+      il: "Ankara",
+      ilçe: "Şereflikoçhisar",
+      mahalle: "Yusufkuyusu Mahallesi",
+      CSBM: "Yusufkuyusu",
+      dışKapı: "1",
+      içKapı: ""
+    })
+  },
+  "1290543783": {
+    "Temel-Bilgileri": /** @type {nvi.TemelBilgileri} */({
+      ad: "Hayri",
+      soyad: "Ankara",
+      dt: "1919.02.09",
+      TCKN: "1290543783",
+      dyeri: "Ankara",
+      cinsiyet: "M"
+    }),
+    "Iletisim-Bilgileri": /** @type {nvi.IletisimBilgileri} */({
+      telefon: "+90(532)930-50-50",
+    }),
+    "Kutuk-Bilgileri": /** @type {nvi.KutukBilgileri} */({
+      il: "Ankara",
+      ilçe: "Altındağ",
+      mahalle: "İstiklal Mahallesi",
+      cilt: 35,
+      hane: 4,
+      BSN: 31,
+      tescil: "1919.02.09",
+      annead: "Hatice",
+      babaad: "Osman",
+      mhali: "Evli",
+    }),
+    "Adres-Bilgileri": /** @type {nvi.AdresBilgileri} */({
+      il: "Ankara",
+      ilçe: "Şereflikoçhisar",
+      mahalle: "Yusufkuyusu Mahallesi",
+      CSBM: "Yusufkuyusu",
+      dışKapı: "1",
+      içKapı: ""
+    })
+  },
+  "6034126892": {
+    "Temel-Bilgileri": /** @type {nvi.TemelBilgileri} */({
+      ad: "Hayriye",
+      soyad: "Ankara",
+      dt: "1921.02.09",
+      TCKN: "6034126892",
+      dyeri: "Ankara",
+      cinsiyet: "F"
+    }),
+    "Iletisim-Bilgileri": /** @type {nvi.IletisimBilgileri} */({
+      telefon: "+90(532)421-10-10",
+    }),
+    "Kutuk-Bilgileri": /** @type {nvi.KutukBilgileri} */({
+      il: "Ankara",
+      ilçe: "Çankaya",
+      mahalle: "Anıttepe Mahallesi",
+      cilt: 28,
+      hane: 9,
+      BSN: 31,
+      tescil: "1921.02.09",
+      annead: "Fevziye",
+      babaad: "Fethi",
+      mhali: "Evli",
     }),
     "Adres-Bilgileri": /** @type {nvi.AdresBilgileri} */({
       il: "Ankara",

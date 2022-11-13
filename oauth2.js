@@ -50,7 +50,7 @@ const PEOPLE = {
       cinsiyet: "M"
     }),
     "Iletisim-Bilgileri": /** @type {nvi.IletisimBilgileri} */({
-      eposta: "hayri.ankara@hotmail.com",
+      eposta: "mehmet.ankara@hotmail.com",
       telefon: "+90(530)300-30-30",
     }),
     "Kutuk-Bilgileri": /** @type {nvi.KutukBilgileri} */({

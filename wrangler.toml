@@ -1,16 +1,7 @@
 account_id = "8f0c2f2271ff857947d9a5b2c38595a0"
-compatibility_date = "2022-10-24"
+compatibility_date = "2022-11-30"
 
 name = "mock-oauth2"
 main = "build/oauth2.js"
 workers_dev = false
 route = "https://mock-oauth2.kimlikdao.net/*"
-
-[env.dev]
-name = "mock-oauth2-dev"
-main = "oauth2.js"
-workers_dev = true
-route = ""
-
-[build]
-command = "make build/oauth2.js"

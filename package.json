@@ -3,11 +3,10 @@
   "name": "mock-oauth2",
   "version": "0.0.0",
   "description": "OAuth2 yapmacık sunucu",
-  "main": "index.js",
   "author": "KimlikDAO <dao@kimlikdao.org>",
   "devDependencies": {
-    "google-closure-compiler": "^20221004.0.0",
+    "google-closure-compiler": "^20221102.0.1",
     "uglify-js": "^3.17.4",
-    "wrangler": "^2.2.1"
+    "wrangler": "^2.5.0"
   }
 }

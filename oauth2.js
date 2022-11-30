@@ -246,7 +246,7 @@ const handleData = (request) => new Response(
 
 export default {
   /**
-   * @param {CFWorkersRequest} request
+   * @param {Request} request
    * @return {Promise<Response>|Response}
    */
   fetch(request) {

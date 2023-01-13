@@ -1,9 +1,14 @@
 /**
- * @fileoverview Mock e-devlet oauth2 server
+ * @fileoverview Mock e-devlet kapisi (oauth2 ve NVI)
  *
  * @author KimlikDAO
  */
 
+/**
+ * Hayal ürünü kişiler: Kaan Ankara ve ailesi.
+ *
+ * @const
+ */
 const PEOPLE = {
   "22345678902": {
     "Temel-Bilgileri": /** @type {nvi.TemelBilgileri} */({
@@ -178,18 +183,16 @@ const PEOPLE = {
 
 /**
  * @param {string} message
- * @return {Response}
+ * @return {!Response}
  */
-const err = (message) => {
-  return new Response('Hata: ' + message, {
-    status: 404,
-    headers: { 'content-type': 'text/plain;charset=utf-8' }
-  });
-}
+const err = (message) => new Response('Hata: ' + message, {
+  status: 404,
+  headers: { 'content-type': 'text/plain;charset=utf-8' }
+});
 
 /**
- * @param {URLSearchParams} params
- * @return {Response}
+ * @param {!URLSearchParams} params
+ * @return {!Response}
  */
 const handleAuth = (params) => {
   if (params.get("response_type") !== 'code')
@@ -205,8 +208,8 @@ const handleAuth = (params) => {
 }
 
 /**
- * @param {Request} request
- * @return {Promise<Response>|Response}
+ * @param {!Request} request
+ * @return {!Promise<!Response>|!Response}
  */
 const handleToken = (request) => {
   if (request.method !== 'POST')
@@ -223,14 +226,14 @@ const handleToken = (request) => {
       return err('Hatalı `client_id`');
     if (data.get('client_secret') !== 'B97B789F-9D0F-48AF-AD09-0721979D0E9F')
       return err('Hatalı `client_secret`');
-    /** @const {OAuthAccessToken} */
+    /** @const {!oauth2.AccessToken} */
     const response = {
       access_token: "AT" + code.substr(2),
       token_type: "bearer",
       expires_in: 0,
       scope: Object.keys(PEOPLE["22345678902"]).join(",")
     }
-    return new Response(JSON.stringify(response), {
+    return Response.json(response, {
       headers: {
         'content-type': 'application/json;charset=utf-8',
         'cache-control': 'no-store'
@@ -239,23 +242,32 @@ const handleToken = (request) => {
   });
 }
 
-const handleData = (request) => new Response(
-  JSON.stringify(PEOPLE[request.headers.get('authorization').slice(9)]), {
+/**
+ * @param {!Request} request
+ * @return {!Response}
+ */
+const handleNVI = (request) => Response.json(
+  PEOPLE[request.headers.get('authorization').slice(9)], {
   headers: { 'content-type': 'application/json;charset=utf-8' }
 });
 
-export default {
+const Worker = {
   /**
-   * @param {Request} request
-   * @return {Promise<Response>|Response}
+   * @param {!Request} request
+   * @return {!Promise<Response>|!Response}
    */
   fetch(request) {
+    /** @const {!URL} */
     const url = new URL(request.url);
     switch (url.pathname) {
       case "/auth": return handleAuth(url.searchParams);
       case "/token": return handleToken(request);
-      case "/bilgi": return handleData(request);
+      case "/nvi/kisi": return handleNVI(request);
     }
     return err("Bilinmeyen pathname");
   }
 }
+
+globalThis["Worker"] = Worker;
+
+export default Worker;

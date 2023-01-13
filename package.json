@@ -1,12 +1,12 @@
 {
   "private": true,
-  "name": "mock-oauth2",
+  "name": "mock-edevlet-kapisi",
   "version": "0.0.0",
-  "description": "OAuth2 yapmacık sunucu",
+  "description": "Mock e-Devlet kapısı",
   "author": "KimlikDAO <dao@kimlikdao.org>",
   "devDependencies": {
-    "google-closure-compiler": "^20221102.0.1",
+    "google-closure-compiler": "^20230103.0.0",
     "uglify-js": "^3.17.4",
-    "wrangler": "^2.5.0"
+    "wrangler": "^2.7.1"
   }
 }

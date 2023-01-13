@@ -1,9 +1,9 @@
-# Mock OAuth2 sunucusu
+# Mock e-Devlet kapısı
 
-Test oauth2 sunucusu https://mock-oauth2.kimlikdao.net adresinde hizmet veriyor.
+Test e-Devlet kapısı sunucusu https://mock-edevlet-kapisi.kimlikdao.net adresinde hizmet veriyor.
 Test sunucusunu yerel olarak böyle başlatabiliriz:
 ``` shell
-wrangler dev --local
+wrangler dev --local mock-edevlet-kapisi.js
 ```
 
 Auth code'u şu şekilde alabiliriz:
@@ -18,5 +18,5 @@ curl localhost:8787/token -d 'grant_type=authorization_code&code=AC22345678902&c
 
 Aldığımız `access_token` ile kullanıcı `Temel-Bilgileri`'ne ulaşabiliriz:
 ```shell
-curl localhost:8787/bilgi -H "Authorization: Bearer AT22345678902"
+curl localhost:8787/nvi/kisi -H "Authorization: Bearer AT22345678902"
 ```
